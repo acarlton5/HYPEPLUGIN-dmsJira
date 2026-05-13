@@ -1,0 +1,19 @@
+{
+  "id": "dmsJira",
+  "name": "Jira Tickets",
+  "description": "Assigned Jira Cloud tickets in DankBar with quick actions (open, transition, comment).",
+  "version": "0.2.0",
+  "license": "MIT",
+  "author": "Ivan Herrera Olivares",
+  "icon": "task_alt",
+  "type": "widget",
+  "capabilities": ["dankbar-widget"],
+  "component": "./DmsJira.qml",
+  "settings": "./DmsJiraSettings.qml",
+  "permissions": [
+    "network",
+    "process",
+    "settings_read",
+    "settings_write"
+  ]
+}
