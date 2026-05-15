@@ -47,7 +47,7 @@ git clone https://github.com/Klievan/dms-jira \
     ~/.config/DankMaterialShell/plugins/dms-jira
 ```
 
-If it doesn't appear, reload: `dms ipc call plugins reload dmsJira`.
+If it doesn't appear, reload: `hype ipc call plugins reload dmsJira`.
 
 For development, symlink the repo instead and run the same reload command after
 edits:

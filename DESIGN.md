@@ -23,7 +23,7 @@ Recommended workflow:
 
 - Develop in a standalone git repo (e.g. `~/code/dms-jira/`) and symlink it
   into the plugins dir: `ln -s ~/code/dms-jira ~/.config/DankMaterialShell/plugins/dms-jira`.
-- Hot reload with `dms ipc call plugins reload dmsJira` — no shell restart.
+- Hot reload with `hype ipc call plugins reload dmsJira` — no shell restart.
 - Once stable, declaratively install via `xdg.configFile."DankMaterialShell/plugins/dms-jira".source = ./dms-jira;`
   in a home-manager module under `home/ivan/`. DMS treats the dir as
   mutable at runtime (state files write back), so use `recursive = true`
@@ -135,7 +135,7 @@ search endpoint to keep cost down.
 ## Notifications
 
 Optional v2: when polling detects a newly-assigned ticket or a new comment
-mentioning you, fire a DMS notification via `dms ipc call notifications send`.
+mentioning you, fire a DMS notification via `hype ipc call notifications send`.
 
 ## v1 scope (resolved)
 
@@ -182,7 +182,7 @@ mentioning you, fire a DMS notification via `dms ipc call notifications send`.
      by polling each open ticket's comments since last-poll timestamp,
      filtering by `accountId` in mention nodes).
 
-   Both go through `dms ipc call notifications send`. Status changes on
+   Both go through `hype ipc call notifications send`. Status changes on
    my own tickets are intentionally excluded — too noisy when you're
    the one moving them.
 10. **Distribution.** Target the [DMS plugin registry](https://github.com/AvengeMedia/dms-plugin-registry).
